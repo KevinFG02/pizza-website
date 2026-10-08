@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Website</title>
+
+    <link rel="icon" href="images\Pizza Icon.png"> 
+    <link rel="Stylesheet" href="styles\pizza_styles.css">
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <img src="images\Pizza-Mascot-2.jpg" alt="Mascot of pizza service">
+            <h1>Welcome to Poppa's Pizza!</h1>
+            <h2>Serving GRC students for over 50 years!!</h2>
+            <hr>
+            <p>We make the best pizza ever! Visit us today!</p>
+            <a id="contact-button" href="#" role="button">Contact us</a>
+        </div>
+        <form id="pizza-form" action="#" method="get">
+            <!-- Contact info -->
+            <fieldset>
+                <legend>Contact Info</legend>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname">
+                <label for="email">Email</label>
+                <input type="email" id="email" ma,e="email">
+            </fieldset>
+
+            <!-- Pickup & Delivery Select -->
+            <fieldset>
+                <legend>Select Pickup or Delivery</legend>
+                <label for="pickup">
+                    <input type="radio" id="pickup" name="method" value="pickup">
+                    Pickup
+                </label>
+                <label for="delivery">
+                    <input type="radio" id="delivery" name="method" value="delivery">
+                    Delivery
+                </label>
+            </fieldset>
+
+            <!-- Toppings Menu -->
+            <fieldset>
+                <legend>Select Toppings</legend>
+                <label for="pepperoni">
+                    <input type="checkbox" id="pepperoni" name="toppings[]" value="pepperoni">
+                    Pepperoni
+                </label>
+                <label for="olives">
+                    <input type="checkbox" id="olives" name="toppings[]" value="olives">
+                    Olives
+                </label>
+                <label for="peppers">
+                    <input type="checkbox" id="peppers" name="toppings[]" value="peppers">
+                    Peppers
+                </label>
+                <label for="onions">
+                    <input type="checkbox" id="onions" name="toppings[]" value="onions">
+                    Onions
+                </label>
+            </fieldset>
+
+            <!-- Size Menu -->
+            <fieldset>
+                <legend>Select Pizza Size</legend>
+                <select id="size" name="size">
+                    <option value="none">--- Select a Size ---</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </fieldset>
+
+            <!-- Comment Field -->
+            <label for="comment">Comments</label>
+            <textarea rows="5" id="comment" name="comment"></textarea>
+
+            <!-- Place Order Button -->
+            <button type="submit" id="order-button">Place Order</button>
+        </form>
+    </div>
+</body>
+</html>
