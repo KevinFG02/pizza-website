@@ -7,6 +7,7 @@
 
     <link rel="icon" href="images\Pizza Icon.png"> 
     <link rel="Stylesheet" href="styles\pizza_styles.css">
+    <script src="scripts/pizza.js" defer></script>
 </head>
 <body>
     <div id="main">
@@ -24,8 +25,12 @@
                 <legend>Contact Info</legend>
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="fname">
+                <span class="err" id="err-fname">Field Not Valid</span>
+
                 <label for="lname">Last Name</label>
                 <input type="text" id="lname" name="lname">
+                <span class="err" id="err-lname">Field Not Valid</span>
+
                 <label for="email">Email</label>
                 <input type="email" id="email" ma,e="email">
             </fieldset>
