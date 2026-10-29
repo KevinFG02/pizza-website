@@ -3,6 +3,7 @@ document.getElementById("pizza-form").onsubmit = () => {
 
     clearErrors();
 
+    // Validate first name
     let fname = document.getElementById("fname").value.trim();
     if (fname === ""){
         document.getElementById("err-fname").style.display = "block";
@@ -15,6 +16,7 @@ document.getElementById("pizza-form").onsubmit = () => {
         isValid = false;
     }
 
+    // Validate method: pickup or delivery
     let methodSelected = false;
     let methodButtons = document.getElementByName("method");
 
@@ -29,18 +31,20 @@ document.getElementById("pizza-form").onsubmit = () => {
         isValid = false;
     }
 
+    // Validate pizza size
     let size = document.getElementById("size").value;
-    if(size = "none"){
+    if(size === "none"){
         document.getElementById("err-size").style.display = "block";
         isValid = false;
     }
-
-    function clearErrors(){
-        let errors = document.getElementsByClassName("err");
-        for(let i=0; i < errors.length; i++){
-            errors[i].style.display = "none";
-        }
-    }
     
+    // Do not submit the form if data is in-valid
     return isValid;
 };
+
+function clearErrors(){
+    let errors = document.getElementsByClassName("err");
+    for(let i=0; i < errors.length; i++){
+        errors[i].style.display = "none";
+    }
+}
